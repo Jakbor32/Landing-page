@@ -1,8 +1,46 @@
 * {
     margin: 0;
-    
+    padding: 0;
+    box-sizing: border-box;
 }
 .logo{
-    width: 8rem;
+    width: 9rem;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+header {
+    width: 90%;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    height: 20vh;
+    border: 1px solid black;
+
 
 }
+nav {
+    flex:2;
+    
+}
+.nav-links{
+justify-content: space-around;
+display: flex;
+list-style-type: none;
+
+
+}
+.nav-link{
+    font-size:x-large;
+    text-align: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: black;
+    
+}
+.logo-div{
+    flex:1;
+    display: flex;
+}
+
