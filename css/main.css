@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .logo{
-    width: 9rem;
+    width: 10rem;
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -16,12 +16,14 @@ header {
     display:flex;
     align-items: center;
     height: 20vh;
-    border: 1px solid black;
+    
 
 
 }
 nav {
     flex:2;
+    
+
     
 }
 .nav-links{
@@ -30,13 +32,25 @@ display: flex;
 list-style-type: none;
 
 
+
 }
 .nav-link{
-    font-size:x-large;
+    font-size:xx-large;
     text-align: center;
     justify-content: space-around;
+    align-items: center;
     text-decoration: none;
     color: black;
+    height: 10vh;
+    display: flex;
+    width: 180px;
+    padding: 10px;
+}
+.nav-link:hover {
+    color: black;
+    box-shadow: 0.4rem 0.4rem black, -0.4rem -0.4rem #ccc;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: bounceIn 0.4s ease-in-out;
     
 }
 .logo-div{
@@ -85,7 +99,7 @@ list-style-type: none;
     background-image:url(../images/slider1.jpg);
     background-repeat: no-repeat;
     background-size:100% 100%;
-    background-attachment: fixed;
+    background-attachment: fixed;  /* background-attachment: fixed; - Parallax effect */
 }
 .slide:nth-of-type(2) {
     background-image:url(../images/slider2.jpg);
@@ -114,3 +128,133 @@ list-style-type: none;
     background-size:100% 100%;
     background-attachment: fixed;
 }
+.slider button {
+    color: white;
+    width: 10% static;
+    height: 10vh;
+    position: absolute;
+    top: 60%; 
+    left: 50%;   
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    margin-right: -50%;
+    z-index: 10;
+    text-transform: uppercase;
+    font-family: Impact;
+    font-size:25px;
+    border-radius: 20px 0 20px 0;
+    background: transparent;
+    border-top: 7px groove black;
+    border-bottom: 7px groove white;
+    border-left: 7px groove white;
+    border-right: 7px groove black;
+    box-shadow: 0 0 10px 0 white;
+    letter-spacing: 3px;
+    -webkit-box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
+}
+.slider button:hover {
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(to left,gold,orange);
+    color: lavender;
+    -webkit-box-shadow: 0px 0px 100px 12px rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 100px 12px rgb(255, 247, 247);
+    box-shadow: 0px 0px 10px 3px rgb(56, 50, 50);
+    animation:font 1s infinite;
+    border-top: 7px groove white;
+    border-bottom: 7px groove black;
+    border-left: 7px groove black;
+    border-right: 7px groove  white;
+    text-shadow: 2px 2px black;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0.1s;
+    font-size: 28px;
+
+}
+.history {
+    display: grid;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "film film film film"
+      "descriptionA descriptionA photoA photoA"
+      " photoB photoB descriptionB descriptionB";
+}
+.film {
+    grid-area: film;
+   border: 1px solid white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.description-a{
+    grid-area: descriptionA;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-a{
+    grid-area: photoA;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description-b{
+    grid-area: descriptionB;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-b{
+    grid-area: photoB;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@-webkit-keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+   
+  
+    0% {
+      -webkit-transform: scale3d(1.0, 1.0, 1.0);
+      transform: scale3d(1.0, 1.0, 1.0);
+    }
+  
+    40% {
+        -webkit-transform: scale3d(1.13, 1.13, 1.13);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    60% {
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
