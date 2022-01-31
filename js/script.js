@@ -1,3 +1,4 @@
+document.featurePolicy.allowedFeatures();
 // Slider
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
@@ -15,5 +16,9 @@ window.onscroll = function() {
     console.log(window.pageYOffset);
      
 }
-   
-   
+// Movement by button
+var button = document.getElementById("button");
+button.onclick = function(){
+    window.scrollTo({top:1 * 760,behavior: 'smooth'});
+    //console.log(document.body.scrollHeight);   <-- checks height of the page
+}

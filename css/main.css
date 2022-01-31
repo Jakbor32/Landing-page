@@ -5,6 +5,7 @@
 }
 .logo{
     width: 10rem;
+    margin-left: 1rem;
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -54,22 +55,21 @@ list-style-type: none;
     
 }
 .logo-div{
-    flex:1;
+    flex:0.7;
     display: flex;
 }
 #slides {
     position: relative;
     height: 80vh;
     padding: 0px;
-    margin: 0px;
     list-style-type: none;
 }
-
 .slide {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
+    flex: 2;
     height: 100%;
     opacity: 0;
     z-index: 1;
@@ -78,7 +78,6 @@ list-style-type: none;
     -o-transition: opacity 2s;
     transition: opacity 4s;
 }
-
 .showing {
     opacity: 1;
     z-index: 2;
@@ -94,7 +93,6 @@ list-style-type: none;
     text-align: center;
     text-shadow: 2px 2px black;
 }
-
 .slide:nth-of-type(1) {
     background-image:url(../images/slider1.jpg);
     background-repeat: no-repeat;
@@ -120,7 +118,6 @@ list-style-type: none;
     background-repeat: no-repeat;
     background-size:100% 100%;
     background-attachment: fixed;
-    
 }
 .slide:nth-of-type(5) {
     background-image:url(../images/slider5.jpg);
@@ -144,10 +141,7 @@ list-style-type: none;
     font-size:25px;
     border-radius: 20px 0 20px 0;
     background: transparent;
-    border-top: 7px groove black;
-    border-bottom: 7px groove white;
-    border-left: 7px groove white;
-    border-right: 7px groove black;
+    border: 7px groove white;
     box-shadow: 0 0 10px 0 white;
     letter-spacing: 3px;
     -webkit-box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
@@ -155,72 +149,156 @@ list-style-type: none;
     box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
 }
 .slider button:hover {
-    transition: 0.5s ease-in-out;
     background: linear-gradient(to left,gold,orange);
     color: lavender;
     -webkit-box-shadow: 0px 0px 100px 12px rgb(255, 255, 255);
     -moz-box-shadow: 0px 0px 100px 12px rgb(255, 247, 247);
     box-shadow: 0px 0px 10px 3px rgb(56, 50, 50);
     animation:font 1s infinite;
-    border-top: 7px groove white;
-    border-bottom: 7px groove black;
-    border-left: 7px groove black;
-    border-right: 7px groove  white;
     text-shadow: 2px 2px black;
     transition: 0.2s ease-in-out;
-    transition-delay: 0.1s;
     font-size: 28px;
+    cursor: pointer;
 
 }
-.history {
+.movie {
     display: grid;
+    position: relative;
     color: white;
     width: 100%;
     height: 100vh;
-    background-color: black;
-    grid-template-columns: auto;
+    border-bottom: 5px solid rgb(2, 47, 92);
+    border-radius: 0 0 40% 0;
+    grid-template-columns: 50%;
     grid-template-rows: auto;
+    overflow: hidden;
     grid-template-areas: 
-      "film film film film"
-      "descriptionA descriptionA photoA photoA"
-      " photoB photoB descriptionB descriptionB";
+      "film film description description"
+      "film film description description";
+      
+      
 }
 .film {
-    grid-area: film;
-   border: 1px solid white;
+   grid-area: film;
    display: flex;
    align-items: center;
    justify-content: center;
+   background-color: rgb(2, 47, 92);
+   
 }
-.description-a{
-    grid-area: descriptionA;
-    border: 1px solid white;
-    display: flex;
+.description{
+    grid-area: description;
+    display: block;
     align-items: center;
     justify-content: center;
+    width: 70%;
+    text-align: center;
+    color: black;
+    margin: auto;
+    font-size: larger;
+    
+    
+    
+
 }
-.photo-a{
-    grid-area: photoA;
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
+.description::before{
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: -5%;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(45deg);
+    box-shadow: 0 40px 20px -20px gray;
+    opacity:0.030;
+    
+}
+.description h1 {
+    font-weight: 800;
+    padding-bottom: 5%;
+}
+.arrow{
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.3;
+}
+.arrow span{
+    display: none;
+    
+}
+button:hover .arrow span{
+    animation: arrows 2s infinite;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    transform: rotate(45deg);
+    margin: -10px;
+    
+}
+button:hover .arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+button:hover .arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+iframe{
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.15) 0px -12px 30px, rgba(255, 255, 255, 0.15) 0px 4px 6px, rgba(255, 255, 255, 0.15) 0px 12px 13px, rgba(255, 255, 255, 0.15) 0px -3px 5px;
+}
+.history{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 25% 25%;
+    grid-template-areas:
+        "descriptionH descriptionH photoH photoH"
+        "photoH2 photoH2 descriptionH2 descriptionH2";
+}
+.photoH{
+    grid-area: photoH;
+    background-color: black;
+    width: 100%;
+}
+.photoH2{
+    grid-area: photoH2;
+    background-color: black;
+    width: 100%;
+}
+.descriptionH{
+    grid-area: descriptionH;
+    background-color: white;
     justify-content: center;
-}
-.description-b{
-    grid-area: descriptionB;
-    border: 1px solid white;
-    display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: center;
+    display: block;
+    margin: auto;
+    
+
 }
-.photo-b{
-    grid-area: photoB;
-    border: 1px solid white;
-    display: flex;
+.imgHistory{
+    object-fit:cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.descriptionH2{
+    grid-area: descriptionH2;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    justify-content: center;
+    display: block;
+    margin: auto;
+    
+   
 }
-@-webkit-keyframes bounceIn {
+@keyframes bounceIn {
     from,
     20%,
     40%,
@@ -258,3 +336,16 @@ list-style-type: none;
       transform: scale3d(1, 1, 1);
     }
   }
+@keyframes arrows {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
