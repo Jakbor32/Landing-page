@@ -27,14 +27,16 @@
                 <h1><!--Title--></h1>
                 <p><!--Text on pictures--></p>
                 <div class="slider">
-                    <button id="button">discover
-                        <div class="arrow">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-              
-            </div>
-                    </button>
+                    <div class="slider-text">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, praesentium nulla. Molestias nobis unde deleniti laboriosam porro beatae illum reiciendis eaque, reprehenderit, voluptate eum aspernatur aut nisi laudantium. Praesentium, minus.</p>
+                    </div>
+                    <button id="button">discover</button>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul id="slides">
                         <li class="slide showing"></li>
                         <li class="slide"></li>
@@ -57,13 +59,102 @@
             </section>
             <section class="history">
                 <div class="descriptionH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eaque quia saepe excepturi maiores quidem adipisci facilis officiis temporibus. Quis aperiam tempora voluptatibus voluptatum cumque dignissimos ab incidunt beatae tenetur!</div>
-                <div class="photoH"><img  class="imgHistory" src="images/CubaHistory.jpg"></div>
-                <div class="photoH2"><img  class="imgHistory" src="images/CubaHistory2.jpg"></div>
+                <div class="photoH"><img  class="imgHistory" src="images/CubaHistory.jpg" /></div>
+                <div class="photoH2"><img  class="imgHistory" src="images/CubaHistory2.jpg" /></div>
                 <div class="descriptionH2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci inventore sed dolor cumque. Expedita aut aliquid aliquam ullam id laboriosam placeat quasi vel, iure maiores nostrum maxime, ratione quia itaque odio sunt voluptas incidunt eum laudantium saepe veritatis dicta.</div>
             </section>
         </main>
         <footer>
-            <div class="contact-container"><!--Contact Form--></div>
+            <div class="gallery">
+                <div class="bg-blur"></div>
+                <div class="gallery-main">
+                    <div class="gallery-slider">
+                        <div id="fade" class="gallery-slides">
+                            <img id="imgSrc" src="/images/gallery1.jpg" alt="gallery1" width="100%" height="100%">
+                            <button class="next" onclick="ChangePhoto();">&#10095</button>
+                            <button class="prev" onclick="ChangePhotoUndo();">&#10094</button>
+                            <div id="example"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactContainer">
+                <form>
+
+                </form>
+            </div>
+            <div class="bottomFooter">
+                <div class="address">
+                    <h2>Address</h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="images/location_icon.png" alt="location_icon" width="30px" height="30px" />
+                            </td>
+                            <td>
+                                <p>10140 Vendeuvre-sur-Barse, France</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/Telephone_icon.png" alt="telephone_icon" width="30px" height="30px" />
+                            </td>
+                            <td>
+                                
+                                29 003 213 121<br>
+                                +48 121 121 444
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/clock_icon.png" alt="clock_icon" width="30px" height="30px" />
+                            </td>
+                            <td>
+                                    <p>Mon-Fri - 8-20</p>
+                                    <p>Sat-Sun - 10-16</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/letter_icon.png" alt="letter_icon" width="30px" height="30px"/>
+                            </td>
+                            <td>
+                                Example@post.com
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="aboutCompany">
+                    <h2>About Company</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam deserunt vel unde numquam rem id fugiat enim, aliquam nisi!</p>
+                    <button>More Info</button>
+                    <button>Contact Us</button>
+                </div>
+                <div class="helpUs">
+                    <h2>Help us</h2>
+                    <h3>Home</h3>
+                    <h3>About</h3>
+                    <h3>Service</h3>
+                    <h3>Team</h3>
+                    <h3>Help</h3>
+                    <h3>Contact</h3>
+                </div>
+                <div class="followUs">
+                    <h2>Follow us</h2>
+                        <img src="images/facebook.png" alt="facebook" width="50px" height="40px" />
+                        <img src="images/Instagram.png" alt="instagram" width="50px" height="40px" />
+                        <img src="images/Snapchat.png" alt="snapchat" width="50px" height="40px" />
+                        <img src="images/Linkedin.png" alt="linkedin" width="50px" height="40px" />
+                        <img src="images/TikTok.png" alt="tiktok" width="50px" height="40px" />
+                        <img src="images/Twitter.png" alt="twitter" width="50px" height="40px"/>
+                        
+                    <div class="copyright">
+                        <h4><span class="CR">©</span>2022 All rights reserved.</h4>
+                    </div>
+                </div>
+            </div>
         </footer>
+        
+        <button id="toTop" class="backToTop"><img src="images/arrows.svg" /></button>
     </body>
 </html>

@@ -11,6 +11,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     
 }
+/*  Menu  */
 header {
     width: 100%;
     margin: auto;
@@ -28,9 +29,9 @@ nav {
     
 }
 .nav-links{
-justify-content: space-around;
-display: flex;
-list-style-type: none;
+    justify-content: space-around; 
+    display: flex;
+    list-style-type: none;
 
 
 
@@ -54,10 +55,12 @@ list-style-type: none;
     animation: bounceIn 0.4s ease-in-out;
     
 }
+/* Logo */
 .logo-div{
     flex:0.7;
     display: flex;
 }
+/* Slider */
 #slides {
     position: relative;
     height: 80vh;
@@ -130,7 +133,7 @@ list-style-type: none;
     width: 10% static;
     height: 10vh;
     position: absolute;
-    top: 60%; 
+    top: 75%; 
     left: 50%;   
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -139,28 +142,48 @@ list-style-type: none;
     text-transform: uppercase;
     font-family: Impact;
     font-size:25px;
-    border-radius: 20px 0 20px 0;
+    border: 5px solid rgba(0, 0, 0, 0.627);
     background: transparent;
-    border: 7px groove white;
-    box-shadow: 0 0 10px 0 white;
     letter-spacing: 3px;
-    -webkit-box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 0px 100px 12px rgba(66, 68, 90, 1);
+    overflow: hidden;
 }
+.slider button::after {
+    content: "";
+    background: #1f1420b9;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+}
+.slider button::after {
+    transition: all 0.2s ease;
+  }
+.slider button:hover::after {
+    transition: all 0.2s ease-out;
+}
+.slider button::after {
+    left: -25%;
+    right: -25%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+  }
+  .slider button:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+  }
+
 .slider button:hover {
-    background: linear-gradient(to left,gold,orange);
     color: lavender;
     -webkit-box-shadow: 0px 0px 100px 12px rgb(255, 255, 255);
     -moz-box-shadow: 0px 0px 100px 12px rgb(255, 247, 247);
     box-shadow: 0px 0px 10px 3px rgb(56, 50, 50);
-    animation:font 1s infinite;
     text-shadow: 2px 2px black;
-    transition: 0.2s ease-in-out;
-    font-size: 28px;
     cursor: pointer;
+    border: 5px solid  rgba(0, 0, 0, 0.627);
+
 
 }
+/* Film */
 .movie {
     display: grid;
     position: relative;
@@ -179,13 +202,15 @@ list-style-type: none;
       
 }
 .film {
-   grid-area: film;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: rgb(2, 47, 92);
+    grid-area: film;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(2, 47, 92);
+    
    
 }
+/* Film Description*/
 .description{
     grid-area: description;
     display: block;
@@ -219,9 +244,36 @@ list-style-type: none;
     font-weight: 800;
     padding-bottom: 5%;
 }
+.slider-text {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 40%;
+    height: 25vh;
+    position: absolute;
+    top: 55%; 
+    left: 50%;   
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    margin-right: -50%;
+    color: whitesmoke;
+    z-index: 12;
+    text-align: center;
+    font-family: ;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    animation: showing 1.5s forwards;
+    animation-timing-function: 
+}
+.slider-text h1{
+    padding-bottom: 30px;
+}
+.slider-text p{
+
+}
+/* Animation of arrows on the button*/
 .arrow{
     position: absolute;
-    top: 180%;
+    z-index: 10;
+    top: 85%;
     left: 50%;
     transform: translate(-50%,-50%);
     opacity: 0.3;
@@ -230,7 +282,7 @@ list-style-type: none;
     display: none;
     
 }
-button:hover .arrow span{
+button:hover + .arrow span{
     animation: arrows 2s infinite;
     display: block;
     width: 30px;
@@ -239,18 +291,21 @@ button:hover .arrow span{
     border-right: 5px solid #ffffff;
     transform: rotate(45deg);
     margin: -10px;
+    z-index: 9999;
+
     
 }
-button:hover .arrow span:nth-child(2){
+button:hover + .arrow span:nth-child(2){
     animation-delay: -0.2s;
 }
-button:hover .arrow span:nth-child(3){
+button:hover + .arrow span:nth-child(3){
     animation-delay: -0.4s;
 }
 iframe{
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.15) 0px -12px 30px, rgba(255, 255, 255, 0.15) 0px 4px 6px, rgba(255, 255, 255, 0.15) 0px 12px 13px, rgba(255, 255, 255, 0.15) 0px -3px 5px;
 }
+/* Container split into 4 parts*/
 .history{
     width: 100%;
     height: 100vh;
@@ -265,6 +320,7 @@ iframe{
     grid-area: photoH;
     background-color: black;
     width: 100%;
+    
 }
 .photoH2{
     grid-area: photoH2;
@@ -297,6 +353,301 @@ iframe{
     margin: auto;
     
    
+}
+/* Animation hidden button back to top */
+.backToTop {
+    width: 60px;
+    height: 60px; 
+    background-color:white;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+    opacity: 0.6;
+    vertical-align: middle;
+    z-index: 9999;
+    display: none;
+
+}
+.backToTop:hover {
+    background-color:azure;
+    opacity: 1;
+    cursor: pointer;
+    
+}
+.backToTop:hover > img{
+    animation: move 1.3s infinite linear;
+}
+.backToTop > img {
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    
+}
+.magicButton{
+    animation: shift 0.7s linear, flash 0.8s ease-in-out;
+    animation-delay: 0s,0.5s;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 100vh;
+    color:white;
+    
+}
+.gallery{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    z-index:999;
+    position: relative;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "gallery-main";
+        
+        
+
+}
+.bg-blur{
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background-attachment: fixed;
+    background-repeat: round;
+    z-index:-1;
+    background-image: url(../images/bgslider.png);   
+}
+
+.gallery-main{
+    grid-area:gallery-main;
+    height: 60vh;
+    width: 50%;
+    place-self: center;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px black;
+    
+
+}
+.gallery-main img{
+    border-radius: 50px;
+}
+.gallery-slider{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+.next, .prev {
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 7%;
+    padding: 15px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+}
+.prev {
+    left: 0;
+    
+}
+.prev:hover {
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    border-radius:  0 50px 50px 0;
+}
+.next:hover {
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    border-radius:  50px 0 0 50px;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+.bottomFooter{
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(34, 33, 33);
+    color:white;
+    align-items: center;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+
+
+}
+.address{
+    border-right: 2px solid white;
+    margin-right: 30px;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+.address table {
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+.address tr,td{
+    padding: 10px;
+    text-align: center;
+}
+.address img {
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.address h2 {
+    display:inline-block;
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+ 
+}
+.aboutCompany{
+    flex: 1;
+    text-align: center;
+    height: 30vh;
+    border-right: 2px solid white;
+
+}
+.aboutCompany h2{
+    margin-bottom: 15%;
+    display:inline-block;
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+}
+.aboutCompany button {
+    width: 7rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    
+}
+.aboutCompany button:hover{
+    background-color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+.helpUs{
+    flex: 1;
+    text-align: center;
+    height: 30vh;
+    line-height: 180%;
+    border-right: 2px solid white;
+}
+.helpUs h2 {
+    margin-bottom: 10%;
+    display:inline-block;
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+}
+.helpUs h3{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+
+}
+.helpUs h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.followUs{
+    flex: 1;
+    text-align: center;
+    height: 30vh;
+}
+.followUs h2{
+    display:table;
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+    margin: 0 auto 15%;
+}
+.followUs img{
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 20%;
+    display: inline;
+}
+.followUs img:hover{
+    transform: scale3d(1.08,1.08,1.08);
+}
+.copyright{
+    flex: 1;
+}
+.contactContainer{
+
+}
+.CR{
+    font-weight: 100;
+    font-size: 25px;
+    padding-right: 5px;
+}
+/* All animations */
+@keyframes shift {
+    0%{
+        right: -20%;
+    }
+    25%{
+        right: -15%;
+    }
+    50%{
+        right: -10%;
+    }
+    75%{
+        right: -5%;
+    }
+    100%{
+        right: 0%;
+        
+    }
+}
+@keyframes flash {
+    0%,25%,50%, 100% {
+        opacity: 1;
+     }
+     75% {
+        opacity: 0;
+     }
+}
+@keyframes move {
+    0% {
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(4%);
+    }
+    50%{
+        transform: translateY(8%);
+    }
+    75%{
+        transform: translateY(4%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 @keyframes bounceIn {
     from,
@@ -349,3 +700,20 @@ iframe{
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  @keyframes showing {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+  }
