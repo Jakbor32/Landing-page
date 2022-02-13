@@ -10,20 +10,23 @@
         <script src="js/script.js" async></script>
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="logo-div"><a href="index.html"><img class="logo" src="images/logo.png" alt="logo" /></a></div>
                 <nav>
-                    <ul class="nav-links">
-                        <li><a class="nav-link" href="#">Home</a></li>
-                        <li><a class="nav-link" href="#">Gallery</a></li>
-                        <li><a class="nav-link" href="#">History</a></li>
-                        <li><a class="nav-link" href="#">Contact</a></li>
-                        <li><a class="nav-link" href="#">About Us</a></li>
-                    </ul>
+                        <label for="toggle"><img id="toggleImage" src="images/menu.svg" alt="menu_icon"></label>
+                        <input type="checkbox" id="toggle">
+                        <ul class="nav-links">
+                            <li><a class="nav-link" href="#">Home</a></li>
+                            <li><a class="nav-link" href="#">Gallery</a></li>
+                            <li><a class="nav-link" href="#">History</a></li>
+                            <li><a class="nav-link" href="#">Contact</a></li>
+                            <li><a class="nav-link" href="#">About Us</a></li>
+                        </ul>
                 </nav>
         </header>
         <main>
             <section>
+            <div class="empty-box"></div> 
                 <h1><!--Title--></h1>
                 <p><!--Text on pictures--></p>
                 <div class="slider">
@@ -51,7 +54,7 @@
                         <h1>
                             Welcome to Cuba
                         </h1>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum quasi pariatur harum eum velit reprehenderit repudiandae, voluptatibus laboriosam voluptates debitis odit dolores dolorem maiores illo aliquid vero ipsam impedit?                         
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum quasi pariatur harum eum velit reprehenderit repudiandae, voluptatibus laboriosam voluptates debitis odit dolores dolorem maiores illo aliquid vero ipsam impedit?                       
                     </div>  
                 <div class="film">
                     <iframe  width="90%" height="60%"  src="https://www.youtube.com/embed/N4ZMYokojGw?controls=1&amp;start=21&amp;fs=1&amp;rel=0&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -60,8 +63,8 @@
             <section class="history">
                 <div class="descriptionH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eaque quia saepe excepturi maiores quidem adipisci facilis officiis temporibus. Quis aperiam tempora voluptatibus voluptatum cumque dignissimos ab incidunt beatae tenetur!</div>
                 <div class="photoH"><img  class="imgHistory" src="images/CubaHistory.jpg" /></div>
-                <div class="photoH2"><img  class="imgHistory" src="images/CubaHistory2.jpg" /></div>
                 <div class="descriptionH2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci inventore sed dolor cumque. Expedita aut aliquid aliquam ullam id laboriosam placeat quasi vel, iure maiores nostrum maxime, ratione quia itaque odio sunt voluptas incidunt eum laudantium saepe veritatis dicta.</div>
+                <div class="photoH2"><img  class="imgHistory" src="images/CubaHistory2.jpg" /></div>
             </section>
         </main>
         <footer>
@@ -69,8 +72,8 @@
                 <div class="bg-blur"></div>
                 <div class="gallery-main">
                     <div class="gallery-slider">
-                        <div id="fade" class="gallery-slides">
-                            <img id="imgSrc" src="/images/gallery1.jpg" alt="gallery1" width="100%" height="100%">
+                        <div  class="gallery-slides">
+                            <img id="imgSrc" src="images/gallery1.jpg" alt="gallery" width="100%" height="100%">
                             <button class="next" onclick="ChangePhoto();">&#10095</button>
                             <button class="prev" onclick="ChangePhotoUndo();">&#10094</button>
                             <div id="example"></div>
@@ -144,12 +147,13 @@
                         <img src="images/facebook.png" alt="facebook" width="50px" height="40px" />
                         <img src="images/Instagram.png" alt="instagram" width="50px" height="40px" />
                         <img src="images/Snapchat.png" alt="snapchat" width="50px" height="40px" />
+                        <span></span>
                         <img src="images/Linkedin.png" alt="linkedin" width="50px" height="40px" />
                         <img src="images/TikTok.png" alt="tiktok" width="50px" height="40px" />
                         <img src="images/Twitter.png" alt="twitter" width="50px" height="40px"/>
                         
                     <div class="copyright">
-                        <h4><span class="CR">©</span>2022 All rights reserved.</h4>
+                        <h4><span>©</span>2022 All rights reserved.<br><span>Borowy J.</span></h4>
                     </div>
                 </div>
             </div>

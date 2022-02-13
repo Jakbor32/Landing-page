@@ -13,7 +13,7 @@ function nextSlide() {
     window.onscroll = function() {
         var slides = document.getElementById("slides");
         slides.style.opacity =  (1.3 - window.pageYOffset / 700);
-        console.log(window.pageYOffset);
+        //console.log(window.pageYOffset);
      
 }
 // Movement by button
@@ -49,7 +49,7 @@ function ChangePhoto(){
         i=1;
     }
     var photo = document.getElementById("imgSrc");
-    photo.src = `/images/gallery${++i}.jpg`;
+    photo.src = `images/gallery${++i}.jpg`;
    
 }
 function ChangePhotoUndo(){
@@ -57,8 +57,47 @@ function ChangePhotoUndo(){
         i=8;
     }
     var photo = document.getElementById("imgSrc");
-    photo.src = `/images/gallery${--i}.jpg`;
+    photo.src = `images/gallery${--i}.jpg`;
 }
-var fade = document.getElementById("fade");
-fade.classList.add("fade");
-fade.classList.remove("fade");
+var headerafter = document.querySelector(".headerafter");
+const checkbox = document.querySelector("#toggle");
+var toggleImage = document.getElementById("toggleImage");
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        toggleImage.src = `images/Letter_x.svg`;
+        header.style.opacity = "1";
+    }else{
+        toggleImage.src = `images/menu.svg`;
+    }
+  });
+  const header = document.getElementById("header");
+  const logostyle = document.querySelector(".logo");
+  const emptyBox = document.querySelector(".empty-box");
+  const handleScroll = () => {
+    if (window.pageYOffset>header.offsetHeight) {
+        
+        header.classList.add("headerafter");
+        header.style.position = "fixed";
+        emptyBox.style.display = "block";
+        logostyle.style.width = "5rem";
+        header.style.opacity = "0.5";
+    
+    }
+    else{
+            
+            header.classList.remove("headerafter");
+            header.style.position = "relative";
+            logostyle.classList.add("logo");
+            emptyBox.style.display = "none";
+            logostyle.style.width = "10rem";
+            header.style.opacity = "1";
+            
+           
+            
+        console.log(window.innerHeight);
+        console.log(window.pageYOffset);
+        console.log(header.offsetHeight);
+    }}
+    
+    
+    window.addEventListener('scroll', handleScroll);

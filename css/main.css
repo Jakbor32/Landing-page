@@ -6,6 +6,13 @@
 .logo{
     width: 10rem;
     margin-left: 1rem;
+    
+}
+.empty-box {
+    width: 100%;
+    height: 20vh;
+    display: none;
+    position: relative;
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -18,6 +25,7 @@ header {
     display:flex;
     align-items: center;
     height: 20vh;
+    position: relative;
     
 
 
@@ -27,6 +35,30 @@ nav {
     
 
     
+}
+.headerafter {
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    opacity: 0.5;
+    height: 0;
+    overflow: hidden;
+    animation: slideY 1.3s ease 1s forwards;
+    background-color: black;
+    color:white;
+}
+.headerafter:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+.headerafter  .nav-link {
+    color: white;
+}
+.headerafter .nav-link:hover{
+    color: white;
+    box-shadow: none;
+    border-bottom: 10px solid white;
+    animation: bounceIn 0.4s ease-in-out; 
 }
 .nav-links{
     justify-content: space-around; 
@@ -266,9 +298,6 @@ nav {
 .slider-text h1{
     padding-bottom: 30px;
 }
-.slider-text p{
-
-}
 /* Animation of arrows on the button*/
 .arrow{
     position: absolute;
@@ -458,10 +487,14 @@ footer{
     user-select: none;
     background-color: transparent;
     border: none;
+    
 }
 .prev {
     left: 0;
-    
+    text-shadow: -5px 0 white;
+}
+.next{
+    text-shadow: 5px 0 white;
 }
 .prev:hover {
     background-color: rgba(0,0,0,0.6);
@@ -473,12 +506,6 @@ footer{
     color:white;
     border-radius:  50px 0 0 50px;
 }
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
 .bottomFooter{
     width: 100%;
     height: 40vh;
@@ -593,17 +620,22 @@ footer{
 }
 .followUs img:hover{
     transform: scale3d(1.08,1.08,1.08);
+    border: 2px solid white;
+    cursor: pointer;
 }
 .copyright{
     flex: 1;
 }
-.contactContainer{
-
-}
-.CR{
+.copyright  span{
     font-weight: 100;
     font-size: 25px;
     padding-right: 5px;
+}
+.copyright span:nth-child(3){
+    opacity: 0.2;
+    font-style: italic;
+    font-size: 20px;
+    font-family:monospace;
 }
 /* All animations */
 @keyframes shift {
@@ -632,6 +664,16 @@ footer{
         opacity: 0;
      }
 }
+@keyframes slideY {
+    from {
+        height: 0;
+        
+    }
+    to {
+        height: 10vh;
+    }
+    
+  }
 @keyframes move {
     0% {
         transform: translateY(0%);
@@ -717,3 +759,1090 @@ footer{
         opacity: 1;
       }
   }
+  #toggle {
+      display: none;
+  }
+  label {
+      display: none;
+  }
+
+    /* Media query - RWD*/
+
+@media only screen and (min-width: 2560px) {
+}
+ 
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+}
+ 
+@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+}
+ 
+@media only screen and (min-width: 1600px) and (max-width: 1679px) {
+}
+ 
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+}
+ 
+@media only screen and (min-width: 1400px) and (max-width: 1439px) {
+}
+ 
+@media only screen and (min-width: 1366px) and (max-width: 1399px) {
+}
+ 
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+   
+}
+ 
+@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+    .followUs h2{
+        margin-bottom: 10px;
+    }
+    .followUs img{
+       width: 60px;
+       height: 50px;
+       margin-bottom:0;
+       
+       
+    }
+    .followUs span::before{
+        content: '\A';
+        white-space: pre;
+    }
+    .copyright h4{
+        line-height: 15px;
+    }
+    .gallery-main{
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) and (max-height: 700px) {
+
+        body{
+            display: none;
+        }
+}
+ 
+@media only screen and (min-width: 960px) and (max-width: 1023px) {
+}
+ 
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+    
+
+
+    .logo{
+        width: 9rem;
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 20vh;
+        z-index: 9999;
+        background-color: white;
+        
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        opacity: 0.5;
+        height: 0;
+        overflow: hidden;
+        animation: slide 1s ease 0.5s forwards
+    }
+    @keyframes slide {
+        from {height: 0;}
+        to {height: 10vh;}
+      }
+    .empty-box {
+        width: 100%;
+        height: 20vh;
+        position: relative;
+        
+    }
+    .nav-links{
+        position: absolute;
+        top:100%;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        
+    }
+    .nav-link{
+        margin-bottom: 40px;
+        display: block;
+        width: 100%;
+        font-size: 3.5em;
+
+        
+        
+    }
+    .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        
+    }
+    
+    label {
+       display: block;
+       margin-right: 20px;
+       float: right;
+       cursor: pointer;
+       max-width: fit-content;
+       width: 50px;
+       
+    }
+    label > img {
+       width: 50px; 
+    }
+    #toggle:checked + .nav-links{
+       display: block;
+       width: 100%;     
+    }
+    .gallery-main{
+        width: 80%;
+    }
+    .movie{
+        display: block;
+        border-radius: 0; 
+        height:110vh;
+     }
+     .description{
+         height: 40vh;
+         width: 100%;
+         position: relative;
+         top: 10%;
+         font-size: 1.5em;
+         
+         
+     }
+     .description h1 {
+        font-size: 2em;
+        text-shadow: 5px 5px gray;
+     }
+        
+     .film{
+         height: 70vh;
+         width: 100%;
+         border-bottom: 20px solid #ccc;   
+     }
+     iframe {
+        border-radius: 0;
+        width: 100%;
+        height:100%;  
+     }
+     .address{
+         margin: 0;
+     }
+     .helpUs h3{
+        margin-bottom: 20px;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        }
+        .aboutCompany{
+            border-right: 2px solid white;
+            text-align: center;
+            display:inline-block;
+            padding: 0;
+            flex:2;
+           
+        }
+        .aboutCompany button{
+            width: 90%;
+            height: 15%;
+            margin-top: 25px;
+            
+        }
+        .aboutCompany h2{
+           width: 90%;
+           text-align: center;
+           margin-bottom: 5px;
+        
+        }
+}
+ 
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+
+.logo{
+    width: 8rem;
+}
+header {
+    width: 100%;
+    text-align: right;
+    height: 20vh;
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    
+}
+.empty-box {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    
+}
+.nav-links{
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    
+}
+.nav-link{
+    margin-bottom: 30px;
+    display: block;
+    width: 100%;
+    font-size: 2.5em;
+    
+    
+}
+.nav-link:hover {
+    border-bottom: 2px solid black;
+    animation: none;
+    box-shadow: none;
+    
+}
+
+label {
+   display: block;
+   margin-right: 20px;
+   float: right;
+   cursor: pointer;
+   max-width: fit-content;
+   width: 50px;
+   
+}
+label > img {
+   width: 50px; 
+}
+#toggle:checked + .nav-links{
+   display: block;
+   width: 100%;     
+}
+
+.slider {
+    height: 60vh;
+    position: relative;
+}
+.slide:nth-child(1) {
+    background-size:100% 70%;
+    background-attachment: local;  
+}
+.slide:nth-child(2) {
+    background-size:100% 70%;
+    background-attachment: local;
+}
+.slide:nth-child(3) {
+    background-size:100% 70%;
+    background-attachment: local;
+}
+.slide:nth-child(4) {
+    background-size:100% 70%;
+    background-attachment: local;
+}
+.slide:nth-child(5) {
+    background-size:100% 70%;
+    background-attachment: local;
+}
+.slider-text{
+   display: none;
+}
+
+.slider button {
+   display: none;
+}
+.movie{
+   display: block;
+   border-radius: 0; 
+}
+.description{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    top: 50px;   
+}
+.description h1 {
+   font-size: 3em;
+   padding-bottom: 100px;
+   text-shadow: 5px 5px gray;
+}
+   
+.film{
+    height: 50vh;
+    width: 100%;
+    border-bottom: 20px solid #ccc;   
+}
+iframe {
+   border-radius: 0;
+   width: 100%;
+   height:100%;  
+}
+.history{
+   display: block;
+   position: relative;
+   text-align: center;
+   height: 200vh;   
+}
+.descriptionH{
+height: 50vh;
+font-size: 1.5em;
+padding-top: 15vh;
+background-color: #ccc;
+border-bottom: 3px solid black;
+border-top: 3px solid black;
+}
+.photoH{
+height: 50vh;
+}
+.descriptionH2{
+height: 50vh;
+font-size: 1.5em;
+padding-top: 15vh;
+background-color: #ccc;
+border-bottom: 3px solid black;
+border-top: 3px solid black; 
+}
+.photoH2{
+height: 50vh;
+border-bottom: 3px solid black;
+
+}
+footer{
+   display:block;
+   position: relative;
+   height: 300vh;
+   font-size: 1em;  
+}
+.gallery{
+   height: 50vh;
+   display: block;
+   position: absolute;
+   bottom: 250vh;  
+}
+.gallery-main {
+   width: 100%;
+   height: 50vh;
+}
+.gallery-slider{
+   display: block;
+   border-bottom: 50px double white;  
+}
+.gallery-slides img{
+    border-radius: 0;
+}
+.next,.prev {
+    font-size: 70px;
+    padding: 0 10% 0 10%;
+    width: 10%;
+    position: absolute;
+    text-shadow: none;
+}
+.next {
+    right: 22px;
+}
+.prev{
+    left:0;
+}
+.prev:hover {
+    background-color: transparent;
+    color:white;
+    border-radius: 0
+}
+.next:hover {
+    background-color: transparent;
+    color:white;
+    border-radius: 0;
+}
+.bg-blur{
+    display: none;
+}
+.bottomFooter{
+    display: flex;
+    position: absolute;
+    height: 250vh;
+    bottom: 0;
+    margin-top: 20px;
+    flex-wrap: wrap;  
+    width: 100%;
+    font-size: 2em;
+}
+.address{
+    flex-basis: 100%;
+    border: 0;
+    margin-right: 0;
+    height: 40vh;  
+}
+.address img {
+   width: 70px;
+   height: 60px;
+}
+
+.address h2{
+margin-bottom: 50px;
+width: 100%;
+}
+.address table {
+margin-left: auto;
+margin-right: auto;
+font-size: 0.8em;
+}
+.aboutCompany{
+    flex-basis: 100%;
+    border: 0;
+    height: 30vh;
+}
+.aboutCompany button{
+    width: 40%;
+    height: 25%;
+    font-size: 0.8em;
+}
+.aboutCompany h2{
+   width: 100%;
+
+}
+.helpUs{
+    flex-basis: 100%;
+    border: 0;
+    height: 50vh;
+    line-height: 200%;
+    
+    
+}
+.helpUs h2{
+   width: 100%;
+   text-align: center;
+   
+}
+.helpUs h3{
+margin-bottom: 20px;
+text-align: center;
+margin: 0;
+width: 100%;
+}
+.followUs{
+    flex-basis: 100%;
+}
+.followUs h2{
+   width: 100%;
+}
+.followUs img{
+   width: 70px;
+   height: 60px;
+   margin-bottom: 20px;
+}
+.copyright{
+    flex-basis: 100%;
+}
+.backToTop:hover > img{
+animation: none;
+} 
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .logo{
+        width: 8rem;
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 20vh;
+        position: fixed;
+        z-index: 9999;
+        background-color: white;
+        
+    }
+    .empty-box {
+        width: 100%;
+        height: 20vh;
+        position: relative;
+        
+    }
+    .nav-links{
+        position: absolute;
+        top:100%;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        
+    }
+    .nav-link{
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        font-size: 2.5em;
+        
+        
+    }
+    .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        
+    }
+    
+   label {
+       display: block;
+       margin-right: 20px;
+       float: right;
+       cursor: pointer;
+       max-width: fit-content;
+       width: 50px;
+       
+   }
+   label > img {
+       width: 50px; 
+   }
+   #toggle:checked + .nav-links{
+       display: block;
+       width: 100%;     
+   }
+
+   .slider {
+        height: 60vh;
+        position: relative;
+   }
+   .slide:nth-child(1) {
+        background-size:100% 70%;
+        background-attachment: local;  
+   }
+   .slide:nth-child(2) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(3) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(4) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(5) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slider-text{
+       display: none;
+   }
+  
+   .slider button {
+       display: none;
+   }
+   .movie{
+       display: block;
+       border-radius: 0; 
+   }
+   .description{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        top: 50px;   
+   }
+   .description h1 {
+       font-size: 3em;
+       padding-bottom: 100px;
+       text-shadow: 5px 5px gray;
+   }
+       
+   .film{
+        height: 50vh;
+        width: 100%;
+        border-bottom: 20px solid #ccc;   
+    }
+   iframe {
+       border-radius: 0;
+       width: 100%;
+       height:100%;  
+   }
+   .history{
+       display: block;
+       position: relative;
+       text-align: center;
+       height: 200vh;   
+   }
+   .descriptionH{
+    height: 50vh;
+    font-size: 1.5em;
+    padding-top: 15vh;
+    background-color: #ccc;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+   }
+   .photoH{
+    height: 50vh;
+   }
+   .descriptionH2{
+    height: 50vh;
+    font-size: 1.5em;
+    padding-top: 15vh;
+    background-color: #ccc;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black; 
+   }
+   .photoH2{
+    height: 50vh;
+    border-bottom: 3px solid black;
+    
+   }
+   footer{
+       display:block;
+       position: relative;
+       height: 300vh;
+       font-size: 1em;  
+   }
+    .gallery{
+       height: 50vh;
+       display: block;
+       position: absolute;
+       bottom: 250vh;  
+   }
+    .gallery-main {
+       width: 100%;
+       height: 50vh;
+   }
+    .gallery-slider{
+       display: block;
+       border-bottom: 50px double white;  
+   }
+    .gallery-slides img{
+        border-radius: 0;
+   }
+    .next,.prev {
+        font-size: 70px;
+        padding: 0 10% 0 10%;
+        width: 10%;
+        position: absolute;
+        text-shadow: none;
+   }
+    .next {
+        right: 22px;
+   }
+    .prev{
+        left:0;
+   }
+    .prev:hover {
+        background-color: transparent;
+        color:white;
+        border-radius: 0
+    }
+    .next:hover {
+        background-color: transparent;
+        color:white;
+        border-radius: 0;
+    }
+    .bg-blur{
+        display: none;
+    }
+   .bottomFooter{
+        display: flex;
+        position: absolute;
+        height: 250vh;
+        bottom: 0;
+        margin-top: 20px;
+        flex-wrap: wrap;  
+        width: 100%;
+        font-size: 2em;
+   }
+   .address{
+        flex-basis: 100%;
+        border: 0;
+        margin-right: 0;
+        height: 40vh;  
+   }
+   .address img {
+       width: 70px;
+       height: 60px;
+   }
+
+   .address h2{
+    margin-bottom: 50px;
+    width: 100%;
+   }
+   .address table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+   }
+   .aboutCompany{
+        flex-basis: 100%;
+        border: 0;
+        height: 30vh;
+   }
+   .aboutCompany button{
+        width: 40%;
+        height: 25%;
+        font-size: 0.8em;
+   }
+   .aboutCompany h2{
+       width: 100%;
+
+   }
+   .helpUs{
+        flex-basis: 100%;
+        border: 0;
+        height: 50vh;
+        line-height: 200%;
+        
+        
+   }
+   .helpUs h2{
+       width: 100%;
+       text-align: center;
+       
+   }
+   .helpUs h3{
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+   }
+   .followUs{
+        flex-basis: 100%;
+   }
+   .followUs h2{
+       width: 100%;
+   }
+   .followUs img{
+       width: 70px;
+       height: 60px;
+       margin-bottom: 20px;
+   }
+   .copyright{
+        flex-basis: 100%;
+   }
+   .backToTop:hover > img{
+    animation: none;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+    .logo{
+        width: 8rem;
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 20vh;
+        position: relative;
+        z-index: 9999;
+        background-color: white;  
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        text-align: right;
+        z-index: 99999;
+        opacity: 0.5;
+        overflow: hidden;
+        animation: none;
+        height: 10%;
+        background-color: white;
+        
+    }
+    #toggle:checked .headerafter{
+        opacity: 0;
+    }
+    .headerafter:hover{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .empty-box {
+        width: 100%;
+        height: 20vh;
+        position: relative;
+        
+    }
+    .nav-links{
+        position: fixed;
+        top:20%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        color: black;
+        
+        
+    }
+    .headerafter .nav-links{
+        top:10%;
+        color: black;
+        background-color: white;
+        
+       
+        
+    }
+    .headerafter .nav-link {
+        color:black;
+        background-color: white;
+        margin-bottom: 10%;
+        padding-top: 7%;
+        z-index: 99999;
+        
+        
+    }
+    .headerafter .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        color: black;
+        
+        
+    }
+    .nav-link{
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        color: black;
+        
+        
+        
+    }
+    .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        
+        
+    }
+    
+   label {
+       display: block;
+       margin-right: 20px;
+       float: right;
+       cursor: pointer;
+       max-width: fit-content;
+       width: 50px;
+       
+   }
+   label > img {
+       width: 50px; 
+   }
+   #toggle:checked + .nav-links{
+       display: block;
+       width: 100%;     
+   }
+   .slider {
+        height: 60vh;
+        position: relative;
+   }
+   .slide:nth-child(1) {
+        background-size:100% 70%;
+        background-attachment: local;  
+   }
+   .slide:nth-child(2) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(3) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(4) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slide:nth-child(5) {
+        background-size:100% 70%;
+        background-attachment: local;
+   }
+   .slider-text{
+       display: none;
+   }
+  
+   .slider button {
+       display: none;
+   }
+   .movie{
+       display: block;
+       border-radius: 0; 
+   }
+   .description{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        top: 50px;   
+   }
+   .description h1 {
+       font-size: 3em;
+       padding-bottom: 100px;
+       text-shadow: 5px 5px gray;
+   }
+       
+   .film{
+        height: 50vh;
+        width: 100%;
+        border-bottom: 20px solid #ccc;   
+    }
+   iframe {
+       border-radius: 0;
+       width: 100%;
+       height:100%;  
+   }
+   .history{
+       display: block;
+       position: relative;
+       text-align: center;
+       height: 200vh;   
+   }
+   .descriptionH{
+    height: 50vh;
+    font-size: 1.5em;
+    padding-top: 15vh;
+    background-color: #ccc;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+   }
+   .photoH{
+    height: 50vh;
+   }
+   .descriptionH2{
+    height: 50vh;
+    font-size: 1.5em;
+    padding-top: 15vh;
+    background-color: #ccc;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black; 
+   }
+   .photoH2{
+    height: 50vh;
+    border-bottom: 3px solid black;
+    
+   }
+   footer{
+       display:block;
+       position: relative;
+       height: 300vh;
+       font-size: 1em;  
+   }
+    .gallery{
+       height: 50vh;
+       display: block;
+       position: absolute;
+       bottom: 250vh;  
+   }
+    .gallery-main {
+       width: 100%;
+       height: 50vh;
+       
+   }
+    .gallery-slider{
+       display: block;
+       border-bottom: 50px double white;  
+   }
+    .gallery-slides img{
+        border-radius: 0;
+   }
+    .next,.prev {
+        font-size: 70px;
+        padding: 0 10% 0 10%;
+        width: 10%;
+        position: absolute;
+        text-shadow: none;
+   }
+    .next {
+        right: 22px;
+   }
+    .prev{
+        left:0;
+   }
+    .prev:hover {
+        background-color: transparent;
+        color:white;
+        border-radius: 0
+    }
+    .next:hover {
+        background-color: transparent;
+        color:white;
+        border-radius: 0;
+    }
+    .bg-blur{
+        display: none;
+    }
+   .bottomFooter{
+        display: flex;
+        position: absolute;
+        height: 250vh;
+        bottom: 0;
+        margin-top: 20px;
+        flex-wrap: wrap;  
+        width: 100%;
+        font-size: 2em;
+   }
+   .address{
+        flex-basis: 100%;
+        border: 0;
+        margin-right: 0;
+        height: 40vh;  
+   }
+   .address img {
+       width: 70px;
+       height: 60px;
+   }
+
+   .address h2{
+    margin-bottom: 50px;
+    width: 100%;
+   }
+   .address table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+   }
+   .aboutCompany{
+        flex-basis: 100%;
+        border: 0;
+        height: 30vh;
+   }
+   .aboutCompany button{
+        width: 40%;
+        height: 25%;
+        font-size: 0.8em;
+   }
+   .aboutCompany h2{
+       width: 100%;
+
+   }
+   .helpUs{
+        flex-basis: 100%;
+        border: 0;
+        height: 50vh;
+        line-height: 200%;
+        
+        
+   }
+   .helpUs h2{
+       width: 100%;
+       text-align: center;
+       
+   }
+   .helpUs h3{
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+   }
+   .followUs{
+        flex-basis: 100%;
+   }
+   .followUs h2{
+       width: 100%;
+   }
+   .followUs img{
+       width: 70px;
+       height: 60px;
+       margin-bottom: 20px;
+   }
+   .copyright{
+        flex-basis: 100%;
+   }
+   .backToTop:hover > img{
+    animation: none;
+    }
+}
