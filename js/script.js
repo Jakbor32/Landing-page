@@ -59,20 +59,36 @@ function ChangePhotoUndo(){
     var photo = document.getElementById("imgSrc");
     photo.src = `images/gallery${--i}.jpg`;
 }
-var headerafter = document.querySelector(".headerafter");
+
 const checkbox = document.querySelector("#toggle");
 var toggleImage = document.getElementById("toggleImage");
+const navLinks = document.querySelector(".nav-links");
+
 checkbox.addEventListener('change', function() {
     if (this.checked) {
         toggleImage.src = `images/Letter_x.svg`;
-        header.style.opacity = "1";
+        body.style.overflow = "hidden";
+        
+        
     }else{
         toggleImage.src = `images/menu.svg`;
+        body.style.overflow = "visible";
+       
+        
+        
+        
     }
+   
+    
+
   });
   const header = document.getElementById("header");
   const logostyle = document.querySelector(".logo");
   const emptyBox = document.querySelector(".empty-box");
+  const body = document.querySelector("body");
+  
+  const headerafter = document.querySelector(".headerafter");
+  
   const handleScroll = () => {
     if (window.pageYOffset>header.offsetHeight) {
         
@@ -80,17 +96,24 @@ checkbox.addEventListener('change', function() {
         header.style.position = "fixed";
         emptyBox.style.display = "block";
         logostyle.style.width = "5rem";
-        header.style.opacity = "0.5";
+        
+        
+        
+       
     
     }
     else{
             
             header.classList.remove("headerafter");
             header.style.position = "relative";
-            logostyle.classList.add("logo");
+            logostyle.style.width = "";
             emptyBox.style.display = "none";
-            logostyle.style.width = "10rem";
-            header.style.opacity = "1";
+            if(checkbox.checked){
+                emptyBox.style.display = "block";
+                   
+            }
+        
+            
             
            
             
@@ -99,5 +122,5 @@ checkbox.addEventListener('change', function() {
         console.log(header.offsetHeight);
     }}
     
-    
+   
     window.addEventListener('scroll', handleScroll);

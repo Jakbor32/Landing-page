@@ -26,15 +26,9 @@ header {
     align-items: center;
     height: 20vh;
     position: relative;
-    
-
-
 }
 nav {
-    flex:2;
-    
-
-    
+    flex:2;   
 }
 .headerafter {
     width: 100%;
@@ -64,9 +58,7 @@ nav {
     justify-content: space-around; 
     display: flex;
     list-style-type: none;
-
-
-
+    padding-right: 5%;
 }
 .nav-link{
     font-size:xx-large;
@@ -85,7 +77,6 @@ nav {
     box-shadow: 0.4rem 0.4rem black, -0.4rem -0.4rem #ccc;
     transition: box-shadow 0.3s ease-in-out;
     animation: bounceIn 0.4s ease-in-out;
-    
 }
 /* Logo */
 .logo-div{
@@ -139,8 +130,6 @@ nav {
     background-repeat: no-repeat;
     background-size:100% 100%;
     background-attachment: fixed;
-   
- 
 }
 .slide:nth-of-type(3) {
     background-image:url(../images/slider3.jpg);
@@ -189,7 +178,7 @@ nav {
 }
 .slider button::after {
     transition: all 0.2s ease;
-  }
+}
 .slider button:hover::after {
     transition: all 0.2s ease-out;
 }
@@ -199,10 +188,10 @@ nav {
     top: 0;
     bottom: 0;
     transform: skewX(-45deg) scale(0, 1);
-  }
+}
   .slider button:hover::after {
     transform: skewX(-45deg) scale(1, 1);
-  }
+}
 
 .slider button:hover {
     color: lavender;
@@ -212,8 +201,6 @@ nav {
     text-shadow: 2px 2px black;
     cursor: pointer;
     border: 5px solid  rgba(0, 0, 0, 0.627);
-
-
 }
 /* Film */
 .movie {
@@ -229,9 +216,7 @@ nav {
     overflow: hidden;
     grid-template-areas: 
       "film film description description"
-      "film film description description";
-      
-      
+      "film film description description";      
 }
 .film {
     grid-area: film;
@@ -239,8 +224,6 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: rgb(2, 47, 92);
-    
-   
 }
 /* Film Description*/
 .description{
@@ -253,10 +236,6 @@ nav {
     color: black;
     margin: auto;
     font-size: larger;
-    
-    
-    
-
 }
 .description::before{
     content: "";
@@ -269,8 +248,7 @@ nav {
     position: absolute;
     transform: rotate(45deg);
     box-shadow: 0 40px 20px -20px gray;
-    opacity:0.030;
-    
+    opacity:0.030;  
 }
 .description h1 {
     font-weight: 800;
@@ -289,11 +267,9 @@ nav {
     color: whitesmoke;
     z-index: 12;
     text-align: center;
-    font-family: ;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     animation: showing 1.5s forwards;
-    animation-timing-function: 
 }
 .slider-text h1{
     padding-bottom: 30px;
@@ -309,7 +285,6 @@ nav {
 }
 .arrow span{
     display: none;
-    
 }
 button:hover + .arrow span{
     animation: arrows 2s infinite;
@@ -320,9 +295,7 @@ button:hover + .arrow span{
     border-right: 5px solid #ffffff;
     transform: rotate(45deg);
     margin: -10px;
-    z-index: 9999;
-
-    
+    z-index: 9999;   
 }
 button:hover + .arrow span:nth-child(2){
     animation-delay: -0.2s;
@@ -332,7 +305,11 @@ button:hover + .arrow span:nth-child(3){
 }
 iframe{
     border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.15) 0px -12px 30px, rgba(255, 255, 255, 0.15) 0px 4px 6px, rgba(255, 255, 255, 0.15) 0px 12px 13px, rgba(255, 255, 255, 0.15) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+     rgba(255, 255, 255, 0.15) 0px -12px 30px,
+      rgba(255, 255, 255, 0.15) 0px 4px 6px,
+       rgba(255, 255, 255, 0.15) 0px 12px 13px,
+        rgba(255, 255, 255, 0.15) 0px -3px 5px;
 }
 /* Container split into 4 parts*/
 .history{
@@ -349,7 +326,6 @@ iframe{
     grid-area: photoH;
     background-color: black;
     width: 100%;
-    
 }
 .photoH2{
     grid-area: photoH2;
@@ -364,8 +340,6 @@ iframe{
     align-items: center;
     display: block;
     margin: auto;
-    
-
 }
 .imgHistory{
     object-fit:cover;
@@ -380,8 +354,6 @@ iframe{
     align-items: center;
     display: block;
     margin: auto;
-    
-   
 }
 /* Animation hidden button back to top */
 .backToTop {
@@ -415,9 +387,7 @@ iframe{
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    
-    
+    bottom: 0;  
 }
 .magicButton{
     animation: shift 0.7s linear, flash 0.8s ease-in-out;
@@ -440,9 +410,6 @@ footer{
     grid-template-columns: auto;
     grid-template-areas:
         "gallery-main";
-        
-        
-
 }
 .bg-blur{
     position: absolute;
@@ -461,8 +428,6 @@ footer{
     place-self: center;
     border-radius: 50px;
     box-shadow: 2px 2px 2px black;
-    
-
 }
 .gallery-main img{
     border-radius: 50px;
@@ -486,8 +451,7 @@ footer{
     transition: 0.6s ease;
     user-select: none;
     background-color: transparent;
-    border: none;
-    
+    border: none; 
 }
 .prev {
     left: 0;
@@ -515,9 +479,6 @@ footer{
     display: flex;
     justify-content:space-around;
     flex-wrap:wrap;
-
-
-
 }
 .address{
     border-right: 2px solid white;
@@ -553,7 +514,6 @@ footer{
     text-align: center;
     height: 30vh;
     border-right: 2px solid white;
-
 }
 .aboutCompany h2{
     margin-bottom: 15%;
@@ -570,13 +530,11 @@ footer{
     margin-top: 20px;
     margin-right: 10px;
     border-radius: 20px;
-    
 }
 .aboutCompany button:hover{
     background-color: black;
     text-decoration: underline;
     cursor: pointer;
-    
 }
 .helpUs{
     flex: 1;
@@ -759,6 +717,11 @@ footer{
         opacity: 1;
       }
   }
+  @keyframes slide {
+    from {height: 0;}
+    to {height: 10vh;}
+  }
+
   #toggle {
       display: none;
   }
@@ -767,42 +730,17 @@ footer{
   }
 
     /* Media query - RWD*/
-
-@media only screen and (min-width: 2560px) {
-}
- 
-@media only screen and (min-width: 1920px) and (max-width: 2559px) {
-}
- 
-@media only screen and (min-width: 1680px) and (max-width: 1919px) {
-}
- 
-@media only screen and (min-width: 1600px) and (max-width: 1679px) {
-}
- 
-@media only screen and (min-width: 1440px) and (max-width: 1599px) {
-}
- 
-@media only screen and (min-width: 1400px) and (max-width: 1439px) {
-}
- 
-@media only screen and (min-width: 1366px) and (max-width: 1399px) {
-}
- 
-@media only screen and (min-width: 1280px) and (max-width: 1365px) {
-   
-}
- 
-@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+@media only screen and (min-width: 1081px) and (max-width: 1279px) {
     .followUs h2{
         margin-bottom: 10px;
     }
     .followUs img{
-       width: 60px;
-       height: 50px;
-       margin-bottom:0;
-       
-       
+        width: 60px;
+        height: 50px;
+        margin-bottom:0;  
+    }
+    .nav-links{
+        padding-right: 10%;
     }
     .followUs span::before{
         content: '\A';
@@ -814,115 +752,66 @@ footer{
     .gallery-main{
         width: 60%;
     }
+    .nav-link {
+        font-size: 1.8rem;
+    }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1199px) and (max-height: 700px) {
+@media only screen and (min-width: 960px) and (max-width: 1080px){
 
-        body{
-            display: none;
-        }
-}
- 
-@media only screen and (min-width: 960px) and (max-width: 1023px) {
-}
- 
-@media only screen and (min-width: 800px) and (max-width: 959px) {
-    
-
-
+    header{
+        height: 15vh;
+    }
     .logo{
-        width: 9rem;
-    }
-    header {
-        width: 100%;
-        text-align: right;
-        height: 20vh;
-        z-index: 9999;
-        background-color: white;
-        
-    }
-    .headerafter {
-        width: 100%;
-        position: fixed;
-        z-index: 99999;
-        opacity: 0.5;
-        height: 0;
-        overflow: hidden;
-        animation: slide 1s ease 0.5s forwards
-    }
-    @keyframes slide {
-        from {height: 0;}
-        to {height: 10vh;}
-      }
-    .empty-box {
-        width: 100%;
-        height: 20vh;
-        position: relative;
-        
-    }
-    .nav-links{
-        position: absolute;
-        top:100%;
-        right: 0;
-        background-color: #fff;
-        width: 100%;
-        height: 100vh;
-        display: none;
-        
-    }
-    .nav-link{
-        margin-bottom: 40px;
-        display: block;
-        width: 100%;
-        font-size: 3.5em;
-
-        
-        
+        width: 7rem;
     }
     .nav-link:hover {
-        border-bottom: 2px solid black;
+        box-shadow: 0rem 0.4rem black;
+        transition: 0.1s ease;
+        padding-left: 30px;
+        padding-right: 30px;
         animation: none;
-        box-shadow: none;
-        
     }
-    
-    label {
-       display: block;
-       margin-right: 20px;
-       float: right;
-       cursor: pointer;
-       max-width: fit-content;
-       width: 50px;
-       
-    }
-    label > img {
-       width: 50px; 
-    }
-    #toggle:checked + .nav-links{
-       display: block;
-       width: 100%;     
-    }
-    .gallery-main{
+    .nav-link {
+        font-size: 1.5em;
         width: 80%;
+        white-space: nowrap;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        padding-top: 0;
+        justify-content:space-around;
     }
+    .nav-links{
+        width: 100%;
+   }
+   .headerafter .nav-link {
+        width: 100%;
+   }
+   .headerafter .nav-link:hover{
+        animation: none;
+        transition: 0.5s linear; 
+   }
+   .slider-text{
+        width: 50%;
+   }
     .movie{
         display: block;
         border-radius: 0; 
         height:110vh;
      }
      .description{
-         height: 40vh;
-         width: 100%;
-         position: relative;
-         top: 10%;
-         font-size: 1.5em;
-         
-         
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        top: 10%;
+        font-size: 1.5em;
+        padding-right: 50px;   
+        padding-left: 50px;   
      }
      .description h1 {
         font-size: 2em;
         text-shadow: 5px 5px gray;
-     }
-        
+     } 
      .film{
          height: 70vh;
          width: 100%;
@@ -942,171 +831,398 @@ footer{
         margin: 0;
         width: 100%;
         }
-        .aboutCompany{
-            border-right: 2px solid white;
-            text-align: center;
-            display:inline-block;
-            padding: 0;
-            flex:2;
+    .aboutCompany{
+        border-right: 2px solid white;
+        text-align: center;
+        display:inline-block;
+        padding: 0;
+        flex:2;
            
         }
-        .aboutCompany button{
-            width: 90%;
-            height: 15%;
-            margin-top: 25px;
+    .aboutCompany button{
+        width: 90%;
+        height: 15%;
+        margin-top: 25px;  
+        }
+    .aboutCompany h2{
+        text-align: center;
+        margin-bottom: 5px;
+        
+        }
+    .followUs img{
+        width: 50px;
+        height: 40px;
+        margin-bottom: 10px;
+        }
+    .followUs span::before{
+        content: '\A';
+        white-space: pre;
+        }
+    .copyright h4{
+        line-height: 15px;
+        }
+    .gallery-main{
+        width: 70%;
+        }
+        
+        
+}
+ 
+
+ 
+@media only screen and (min-width: 888px) and (max-width: 959px) {
+    
+
+
+    .logo{
+        width: 7rem;
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 15vh;
+        position: relative;
+        z-index: 9999;
+        background-color: white;  
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        text-align: right;
+        z-index: 99999;
+        overflow: hidden;
+        animation: none;
+        height: 10%;
+        opacity:1;
+        background-color: white;
+        animation: slide 1s ease-in-out;
+    }
+    #toggle:checked .headerafter{
+        opacity: 1;
+    }
+    .headerafter{
+       opacity:1;
+     
+    }
+    .empty-box {
+        width: 100%;
+        height: 15vh;
+        position: relative;
+    }
+    .slider-text{
+        width: 50%;
+    }
+    header .nav-link{
+        font-size: 3rem;
+        margin-top: 5%;
+    }
+    .nav-links{
+        position: fixed;
+        top:15%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        color: black;
+    }
+    .headerafter .nav-links{
+        top:10%;
+        position: fixed;
+        color: black;
+        background-color: white; 
+    }
+    .headerafter .nav-link {
+        color:black;
+        background-color: white;
+        font-size: 3rem;
+        margin-top: 5%; 
+    }
+    .headerafter .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        color: black;
+    }
+    .nav-link{
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        color: black;  
+    }
+    .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;  
+    }
+    
+   label {
+       display: block;
+       margin-right: 20px;
+       float: right;
+       cursor: pointer;
+       max-width: fit-content;
+       width: 50px;  
+   }
+   label > img {
+       width: 50px;
+       }
+   #toggle:checked + .nav-links{
+       display: block;
+       width: 100%; 
+       height: 100%; 
+   }
+    .gallery-main{
+        width: 80%;
+    }
+    .movie{
+        display: block;
+        border-radius: 0; 
+        height:110vh;
+     }
+     .description{
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        top: 10%;
+        font-size: 1.5em; 
+     }
+     .description h1 {
+        font-size: 2em;
+        text-shadow: 5px 5px gray;
+     }
+        
+     .film{
+        height: 70vh;
+        width: 100%;
+        border-bottom: 20px solid #ccc;   
+     }
+     iframe {
+        border-radius: 0;
+        width: 100%;
+        height:100%;  
+     }
+     .address{
+        margin: 0;
+     }
+     .helpUs h3{
+        margin-bottom: 20px;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        }
+    .aboutCompany{
+        border-right: 2px solid white;
+        text-align: center;
+        display:inline-block;
+        padding: 0;
+        flex:2;
+           
+        }
+    .aboutCompany button{
+        width: 90%;
+        height: 15%;
+        margin-top: 25px;
             
         }
-        .aboutCompany h2{
-           width: 90%;
-           text-align: center;
-           margin-bottom: 5px;
+    .aboutCompany h2{
+        width: 90%;
+        text-align: center;
+        margin-bottom: 5px;
         
+        }
+    .followUs img{
+        width: 50px;
+        height: 40px;
+        margin-bottom: 10px;
+         }
+    .followUs span::before{
+        content: '\A';
+        white-space: pre;
+         }
+    .copyright h4{
+        line-height: 15px;
         }
 }
  
-@media only screen and (min-width: 768px) and (max-width: 799px) {
-
-.logo{
-    width: 8rem;
-}
-header {
-    width: 100%;
-    text-align: right;
-    height: 20vh;
-    position: fixed;
-    z-index: 9999;
-    background-color: white;
+@media only screen and (min-width: 768px) and (max-width: 887px) {
     
-}
-.empty-box {
-    width: 100%;
-    height: 20vh;
-    position: relative;
-    
-}
-.nav-links{
-    position: absolute;
-    top:100%;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    
-}
-.nav-link{
-    margin-bottom: 30px;
-    display: block;
-    width: 100%;
-    font-size: 2.5em;
-    
-    
-}
-.nav-link:hover {
-    border-bottom: 2px solid black;
-    animation: none;
-    box-shadow: none;
-    
-}
-
-label {
-   display: block;
-   margin-right: 20px;
-   float: right;
-   cursor: pointer;
-   max-width: fit-content;
-   width: 50px;
-   
-}
-label > img {
-   width: 50px; 
-}
-#toggle:checked + .nav-links{
-   display: block;
-   width: 100%;     
-}
-
-.slider {
-    height: 60vh;
-    position: relative;
-}
-.slide:nth-child(1) {
-    background-size:100% 70%;
-    background-attachment: local;  
-}
-.slide:nth-child(2) {
-    background-size:100% 70%;
-    background-attachment: local;
-}
-.slide:nth-child(3) {
-    background-size:100% 70%;
-    background-attachment: local;
-}
-.slide:nth-child(4) {
-    background-size:100% 70%;
-    background-attachment: local;
-}
-.slide:nth-child(5) {
-    background-size:100% 70%;
-    background-attachment: local;
-}
-.slider-text{
-   display: none;
-}
-
-.slider button {
-   display: none;
-}
-.movie{
-   display: block;
-   border-radius: 0; 
-}
-.description{
-    height: 50vh;
-    width: 100%;
-    position: relative;
-    top: 50px;   
-}
-.description h1 {
-   font-size: 3em;
-   padding-bottom: 100px;
-   text-shadow: 5px 5px gray;
-}
-   
-.film{
-    height: 50vh;
-    width: 100%;
-    border-bottom: 20px solid #ccc;   
-}
-iframe {
-   border-radius: 0;
-   width: 100%;
-   height:100%;  
-}
-.history{
-   display: block;
-   position: relative;
-   text-align: center;
-   height: 200vh;   
-}
-.descriptionH{
-height: 50vh;
-font-size: 1.5em;
-padding-top: 15vh;
-background-color: #ccc;
-border-bottom: 3px solid black;
-border-top: 3px solid black;
-}
-.photoH{
-height: 50vh;
-}
-.descriptionH2{
-height: 50vh;
-font-size: 1.5em;
-padding-top: 15vh;
-background-color: #ccc;
-border-bottom: 3px solid black;
-border-top: 3px solid black; 
+    .logo{
+        width: 7rem; 
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 15vh;
+        position: relative;
+        z-index: 9999;
+        background-color: white;  
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        text-align: right;
+        z-index: 99999;
+        overflow: hidden;
+        animation: none;
+        height: 10%;
+        opacity:1;
+        background-color: white;
+        animation: slide 1s ease-in-out;
+    }
+    #toggle:checked .headerafter{
+        opacity: 1;
+    }
+    .headerafter:{
+       opacity:1;   
+    }
+    .empty-box {
+        width: 100%;
+        height: 15vh;
+        position: relative;
+        
+    }
+    .slider-text{
+        width: 50%;
+    }
+    header .nav-link{
+        font-size: 3rem;
+        margin-top: 5%;
+    }
+    .nav-links{
+        position: fixed;
+        top:15%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        color: black;  
+    }
+    .headerafter .nav-links{
+        top:10%;
+        position: fixed;
+        color: black;
+        background-color: white;   
+    }
+    .headerafter .nav-link {
+        color:black;
+        background-color: white;
+        font-size: 3rem;
+        margin-top: 5%;  
+    }
+    .headerafter .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        color: black;  
+    }
+    .nav-link{
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        color: black; 
+    }
+    .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;   
+    }
+    label {
+        display: block;
+        margin-right: 20px;
+        float: right;
+        cursor: pointer;
+        max-width: fit-content;
+        width: 50px;
+    }
+    label > img {
+        width: 50px;
+    }
+    #toggle:checked + .nav-links{
+        display: block;
+        width: 100%; 
+        height: 100%;   
+   }
+    .slider {
+        height: 60vh;
+        position: relative;
+    }
+    .slide:nth-child(1) {
+        background-size:100% 70%;
+        background-attachment: local;  
+    }
+    .slide:nth-child(2) {
+        background-size:100% 70%;
+        background-attachment: local;
+    }
+    .slide:nth-child(3) {
+        background-size:100% 70%;
+        background-attachment: local;
+    }
+    .slide:nth-child(4) {
+        background-size:100% 70%;
+        background-attachment: local;
+    }
+    .slide:nth-child(5) {
+        background-size:100% 70%;
+        background-attachment: local;
+    } 
+    .slider-text{
+        display: none;
+    }
+    .slider button {
+        display: none;
+    }
+    .movie{
+        display: block;
+        border-radius: 0; 
+    }
+    .description{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        top: 50px;   
+    }
+    .description h1 {
+        font-size: 3em;
+        padding-bottom: 100px;
+        text-shadow: 5px 5px gray;
+    }
+    .film{
+        height: 50vh;
+        width: 100%;
+        border-bottom: 20px solid #ccc;   
+    }
+    iframe {
+        border-radius: 0;
+        width: 100%;
+        height:100%;  
+    }
+    .history{
+        display: block;
+        position: relative;
+        text-align: center;
+        height: 200vh;   
+    }
+    .descriptionH{
+        height: 50vh;
+        font-size: 1.5em;
+        padding-top: 15vh;
+        background-color: #ccc;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+    }
+    .photoH{
+        height: 50vh;
+    }
+    .descriptionH2{
+        height: 50vh;
+        font-size: 1.5em;
+        padding-top: 15vh;
+        background-color: #ccc;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black; 
 }
 .photoH2{
 height: 50vh;
@@ -1117,21 +1233,27 @@ footer{
    display:block;
    position: relative;
    height: 300vh;
-   font-size: 1em;  
+   font-size: 1em; 
 }
 .gallery{
    height: 50vh;
    display: block;
    position: absolute;
-   bottom: 250vh;  
+   bottom: 250vh;
+   
 }
 .gallery-main {
-   width: 100%;
+   width: 80%;
    height: 50vh;
+   margin:  0 auto;
+   box-shadow: none;
+   border: 10px solid black;
+   border-radius: 0;
 }
 .gallery-slider{
    display: block;
-   border-bottom: 50px double white;  
+   
+   
 }
 .gallery-slides img{
     border-radius: 0;
@@ -1245,38 +1367,88 @@ animation: none;
 }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
     .logo{
-        width: 8rem;
+        width: 7rem;
+        
     }
     header {
         width: 100%;
         text-align: right;
-        height: 20vh;
-        position: fixed;
+        height: 15vh;
+        position: relative;
         z-index: 9999;
+        background-color: white;  
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        text-align: right;
+        z-index: 99999;
+        overflow: hidden;
+        animation: none;
+        height: 10%;
+        opacity:1;
         background-color: white;
+        animation: slide 1s ease-in-out;
         
     }
+    
     .empty-box {
         width: 100%;
-        height: 20vh;
+        height: 15vh;
         position: relative;
         
     }
+    .slider-text{
+        width: 50%;
+    }
+    header .nav-link{
+        font-size: 3rem;
+        margin-top: 5%;
+    }
     .nav-links{
-        position: absolute;
-        top:100%;
+        position: fixed;
+        top:15%;
         right: 0;
-        background-color: #fff;
+        background-color: white;
         width: 100%;
         height: 100vh;
         display: none;
+        color: black;
+        
+        
+    }
+    .headerafter .nav-links{
+        top:10%;
+        position: fixed;
+        color: black;
+        background-color: white;
+        
+       
+        
+    }
+    .headerafter .nav-link {
+        color:black;
+        background-color: white;
+        font-size: 3rem;
+        margin-top: 5%;
+        
+        
+        
+    }
+    .headerafter .nav-link:hover {
+        border-bottom: 2px solid black;
+        animation: none;
+        box-shadow: none;
+        color: black;
+        
         
     }
     .nav-link{
         margin-bottom: 30px;
         display: block;
         width: 100%;
-        font-size: 2.5em;
+        color: black;
+        
         
         
     }
@@ -1284,6 +1456,7 @@ animation: none;
         border-bottom: 2px solid black;
         animation: none;
         box-shadow: none;
+        
         
     }
     
@@ -1297,11 +1470,12 @@ animation: none;
        
    }
    label > img {
-       width: 50px; 
-   }
+       width: 50px;
+       }
    #toggle:checked + .nav-links{
        display: block;
-       width: 100%;     
+       width: 100%; 
+       height: 100%;   
    }
 
    .slider {
@@ -1337,6 +1511,7 @@ animation: none;
    }
    .movie{
        display: block;
+       height: 100vh;
        border-radius: 0; 
    }
    .description{
@@ -1352,7 +1527,7 @@ animation: none;
    }
        
    .film{
-        height: 50vh;
+        height: 60vh;
         width: 100%;
         border-bottom: 20px solid #ccc;   
     }
@@ -1392,24 +1567,27 @@ animation: none;
     
    }
    footer{
-       display:block;
-       position: relative;
-       height: 300vh;
-       font-size: 1em;  
+        display:block;
+        position: relative;
+        height: 300vh;
+        font-size: 1em;  
    }
     .gallery{
-       height: 50vh;
-       display: block;
-       position: absolute;
-       bottom: 250vh;  
+        height: 50vh;
+        display: block;
+        position: absolute;
+        bottom: 250vh;  
    }
     .gallery-main {
-       width: 100%;
-       height: 50vh;
+        width: 80%;
+        height: 50vh;
+        margin:  0 auto;
+        box-shadow: none;
+        border: 10px solid black;
+        border-radius: 0;
    }
     .gallery-slider{
-       display: block;
-       border-bottom: 50px double white;  
+        display: block;
    }
     .gallery-slides img{
         border-radius: 0;
@@ -1523,12 +1701,13 @@ animation: none;
 }
 @media only screen and (min-width: 480px) and (max-width: 639px) {
     .logo{
-        width: 8rem;
+        width: 7rem;
+        
     }
     header {
         width: 100%;
         text-align: right;
-        height: 20vh;
+        height: 15vh;
         position: relative;
         z-index: 9999;
         background-color: white;  
@@ -1538,29 +1717,31 @@ animation: none;
         position: fixed;
         text-align: right;
         z-index: 99999;
-        opacity: 0.5;
         overflow: hidden;
         animation: none;
         height: 10%;
+        opacity:1;
         background-color: white;
+        animation: slide 1s ease-in-out;
         
     }
-    #toggle:checked .headerafter{
-        opacity: 0;
-    }
-    .headerafter:hover{
-        opacity: 1;
-        transition: 0.5s;
-    }
+    
     .empty-box {
         width: 100%;
-        height: 20vh;
+        height: 15vh;
         position: relative;
         
     }
+    .slider-text{
+        width: 50%;
+    }
+    header .nav-link{
+        font-size: 3rem;
+        margin-top: 5%;
+    }
     .nav-links{
         position: fixed;
-        top:20%;
+        top:15%;
         right: 0;
         background-color: white;
         width: 100%;
@@ -1572,6 +1753,7 @@ animation: none;
     }
     .headerafter .nav-links{
         top:10%;
+        position: fixed;
         color: black;
         background-color: white;
         
@@ -1581,9 +1763,9 @@ animation: none;
     .headerafter .nav-link {
         color:black;
         background-color: white;
-        margin-bottom: 10%;
-        padding-top: 7%;
-        z-index: 99999;
+        font-size: 3rem;
+        margin-top: 5%;
+        
         
         
     }
@@ -1622,12 +1804,14 @@ animation: none;
        
    }
    label > img {
-       width: 50px; 
-   }
+       width: 50px;
+       }
    #toggle:checked + .nav-links{
        display: block;
-       width: 100%;     
+       width: 100%; 
+       height: 100%;   
    }
+
    .slider {
         height: 60vh;
         position: relative;
@@ -1846,3 +2030,363 @@ animation: none;
     animation: none;
     }
 }
+@media only screen and (min-width: 370px) and (max-width: 400px) and (min-height:650px) and (max-height:900px) {
+.logo{
+        width: 7rem;
+        
+    }
+    header {
+        width: 100%;
+        text-align: right;
+        height: 15vh;
+        position: relative;
+        z-index: 9999;
+        background-color: white;  
+    }
+    .headerafter {
+        width: 100%;
+        position: fixed;
+        text-align: right;
+        z-index: 99999;
+        overflow: hidden;
+        animation: none;
+        height: 10%;
+        opacity:1;
+        background-color: white;
+        animation: slide 1s ease-in-out;
+        
+    }
+    
+    .empty-box {
+        width: 100%;
+        height: 15vh;
+        position: relative;   
+    }
+
+    header .nav-link{
+        font-size: 3em;
+        
+    }
+    .nav-links{
+        position: fixed;
+        top:15%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        color: black;
+        padding-right: 0;
+    }
+    .headerafter .nav-links{
+        top:10%;
+        position: fixed;
+        color: black;
+        background-color: white;
+        
+       
+        
+    }
+    .headerafter .nav-link {
+        color:black;
+        background-color: white;
+        font-size: 3rem;
+        margin-top: 5%;
+        
+        
+        
+    }
+    .headerafter .nav-link:hover {
+        animation: none;
+        box-shadow: none;
+        color: black;
+        text-shadow: 1px 2px red;
+        font-weight: bolder;
+        
+        
+    }
+    .nav-link{
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        color: black;
+        
+        
+        
+    }
+    .nav-link:hover {
+        text-shadow: 1px 2px red;
+        font-weight: bolder;
+        animation: none;
+        box-shadow: none;
+        
+        
+    }
+    
+   label {
+       display: block;
+       margin-right: 20px;
+       float: right;
+       cursor: pointer;
+       max-width: fit-content;
+       width: 50px;
+       
+   }
+   label > img {
+       width: 50px;
+       }
+   #toggle:checked + .nav-links{
+       display: block;
+       width: 100%; 
+       height: 100%;   
+   }
+
+   .slider {
+        height: 40vh;
+        position: relative;
+       
+   }
+   .slide:nth-child(1) {
+        background-size:100% 50%;
+        background-attachment: local;  
+   }
+   .slide:nth-child(2) {
+        background-size:100% 50%;
+        background-attachment: local;
+   }
+   .slide:nth-child(3) {
+        background-size:100% 50%;
+        background-attachment: local;
+   }
+   .slide:nth-child(4) {
+        background-size:100% 50%;
+        background-attachment: local;
+   }
+   .slide:nth-child(5) {
+        background-size:100% 50%;
+        background-attachment: local;
+   }
+   .slider-text{
+    display: none;
+   }
+  
+   .slider button {
+    display: none;
+   }
+   .movie{
+       display: block;
+       height: 80vh;
+       border-radius: 0; 
+   }
+   .description{
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        background: linear-gradient(black,gray);   
+   }
+   .description h1 {
+       font-size: 3em;
+       padding: 50px 0 50px 0;
+       text-shadow: 3px 3px white;
+       color: rgba(0, 0, 0, 0.199);
+   }
+       
+   .film{
+        height: 40vh;
+        width: 100%; 
+    
+     
+    }
+   iframe {
+       border-radius: 0;
+       width: 100%;
+       height: 100%; 
+       box-shadow: none;
+       
+   }
+   .history{
+       display: block;
+       position: relative;
+       text-align: center;
+       height: 120vh;   
+   }
+   .descriptionH{
+    height: 30vh;
+    font-size: 1.3em;
+    background-color: #ccc;
+    border-bottom: 5px solid black;
+    
+    display: flex;
+	justify-content: center;
+	align-items: center;
+   }
+   .photoH{
+    height: 30vh;
+   }
+   .descriptionH2{
+    height: 30vh;
+    font-size: 1.3em;
+    background-color: #ccc;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    display: flex;
+	justify-content: center;
+	align-items: center; 
+   }
+   .photoH2{
+    height: 30vh;
+    border-bottom: 5px solid black;
+    
+   }
+   footer{
+        display: block;
+        position: relative;
+        height: 290vh;
+        font-size: 1em; 
+        background-color: black;   
+   }
+    .gallery{
+        height: 40vh;
+        display: block;
+        position: absolute;
+        bottom: 250vh;
+        
+   }
+    .gallery-main {
+        width: 100%;
+        height: 40vh;
+        margin:  0 auto;
+        box-shadow: none;
+        border-radius: 0;
+
+   }
+    .gallery-slider{
+        display: block;
+   }
+    .gallery-slides img{
+        border-radius: 0;
+   }
+    .next,.prev {
+        font-size: 70px;
+        padding: 0 5% 0 5%;
+        width: 0%;
+        position: absolute;
+        text-shadow: none;
+        display: block;
+        color: white;
+        opacity: 0.8;
+        padding: 10px;
+        
+   }
+   .next:hover, .prev:hover {
+    background-color: transparent;
+    }
+    .next{
+        right: 10%;
+   }
+    .prev{
+        left:0;
+   }
+    
+    .bg-blur{
+        display: none;
+    }
+   .bottomFooter{
+        display: block;
+        position: absolute;
+        height: 250vh;
+        bottom: 0;
+        padding-top: 10%;
+        flex-wrap: wrap;  
+        width: 100%;
+        font-size: 2em;
+       
+   }
+   .address{
+        flex-basis: 100%;
+        border: 0;
+        height: 70vh; 
+        width: 100%; 
+   }
+   .address img {
+       width: 70px;
+       height: 60px;
+   }
+
+   .address h2{
+    margin-bottom: 50px;
+    width: 100%;
+   }
+   .address table {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+    font-size: 0.8em;
+   }
+   .aboutCompany{
+        flex-basis: 100%;
+        border: 0;
+        height: 60vh;
+        margin: 0;
+        line-height: 40px;
+   }
+   .aboutCompany button{
+        width: 40%;
+        height: 15%;
+        font-size: 0.8em;
+
+   }
+   .aboutCompany h2{
+       width: 100%;
+
+   }
+   .helpUs{
+        flex-basis: 100%;
+        border: 0;
+        height: 50vh;
+        
+        
+        
+   }
+   .helpUs h2{
+       width: 100%;
+       text-align: center;
+       
+   }
+   .helpUs h3{
+    text-align: center;
+    margin: 0;
+    width: 100%;
+   }
+   .copyright{
+        flex-basis: 100%;
+        display: block;
+        height: 10vh;
+        margin-top: -5%;
+   }
+   .backToTop {
+       display: none;
+   }
+   .backToTop:hover > img{
+    animation: none;
+    }
+    .followUs img{
+        width: 70px;
+        height: 50px;
+        margin-bottom: 10px;
+     }
+     .followUs span::before{
+         content: '\A';
+         white-space: pre;
+     }
+     .followUs {
+         margin-top: 15%;
+         height: 60vh;
+         width: 100%;
+         border-bottom: 1px solid white;
+     }
+     .followUs h2{
+        text-align: center;
+        width: 100%;
+     }
+    }
