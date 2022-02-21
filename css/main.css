@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 .logo{
     width: 10rem;
@@ -1700,6 +1701,7 @@ animation: none;
     }
 }
 @media only screen and (min-width: 480px) and (max-width: 639px) {
+    
     .logo{
         width: 7rem;
         
@@ -2030,9 +2032,9 @@ animation: none;
     animation: none;
     }
 }
-@media only screen and (min-width: 370px) and (max-width: 400px) and (min-height:650px) and (max-height:900px) {
-.logo{
-        width: 7rem;
+@media only screen and (min-width: 350px) and (max-width: 430px) and (min-height:650px) and (max-height:900px) {
+     .logo{
+        width: 6rem;
         
     }
     header {
@@ -2185,7 +2187,7 @@ animation: none;
         background: linear-gradient(black,gray);   
    }
    .description h1 {
-       font-size: 3em;
+       font-size: 2em;
        padding: 50px 0 50px 0;
        text-shadow: 3px 3px white;
        color: rgba(0, 0, 0, 0.199);
@@ -2212,7 +2214,8 @@ animation: none;
    }
    .descriptionH{
     height: 30vh;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    padding: 10px 10px 0 0;
     background-color: #ccc;
     border-bottom: 5px solid black;
     
@@ -2225,13 +2228,14 @@ animation: none;
    }
    .descriptionH2{
     height: 30vh;
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-color: #ccc;
     border-bottom: 5px solid black;
     border-top: 5px solid black;
     display: flex;
 	justify-content: center;
 	align-items: center; 
+    padding: 10px 10px 0 0;
    }
    .photoH2{
     height: 30vh;
@@ -2241,7 +2245,7 @@ animation: none;
    footer{
         display: block;
         position: relative;
-        height: 290vh;
+        height: 345vh;
         font-size: 1em; 
         background-color: black;   
    }
@@ -2249,7 +2253,7 @@ animation: none;
         height: 40vh;
         display: block;
         position: absolute;
-        bottom: 250vh;
+        bottom: 305vh;
         
    }
     .gallery-main {
@@ -2294,39 +2298,40 @@ animation: none;
    .bottomFooter{
         display: block;
         position: absolute;
-        height: 250vh;
+        height: 308vh;
         bottom: 0;
         padding-top: 10%;
         flex-wrap: wrap;  
         width: 100%;
         font-size: 2em;
+        
        
    }
    .address{
         flex-basis: 100%;
         border: 0;
-        height: 70vh; 
+        height: 90vh; 
         width: 100%; 
    }
    .address img {
-       width: 70px;
-       height: 60px;
+       width: 60px;
+       height: 50px;
    }
 
    .address h2{
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     width: 100%;
    }
    .address table {
     margin-left: auto;
     margin-right: auto;
-    height: 50vh;
+    height: 80vh;
     font-size: 0.8em;
    }
    .aboutCompany{
         flex-basis: 100%;
         border: 0;
-        height: 60vh;
+        height: 75vh;
         margin: 0;
         line-height: 40px;
    }
@@ -2343,10 +2348,7 @@ animation: none;
    .helpUs{
         flex-basis: 100%;
         border: 0;
-        height: 50vh;
-        
-        
-        
+        height: 65vh;    
    }
    .helpUs h2{
        width: 100%;
@@ -2361,7 +2363,6 @@ animation: none;
    .copyright{
         flex-basis: 100%;
         display: block;
-        height: 10vh;
         margin-top: -5%;
    }
    .backToTop {
@@ -2373,7 +2374,7 @@ animation: none;
     .followUs img{
         width: 70px;
         height: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
      }
      .followUs span::before{
          content: '\A';

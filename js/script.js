@@ -50,6 +50,7 @@ function ChangePhoto(){
     }
     var photo = document.getElementById("imgSrc");
     photo.src = `images/gallery${++i}.jpg`;
+    
    
 }
 function ChangePhotoUndo(){
@@ -68,15 +69,10 @@ checkbox.addEventListener('change', function() {
     if (this.checked) {
         toggleImage.src = `images/Letter_x.svg`;
         body.style.overflow = "hidden";
-        
-        
+           
     }else{
         toggleImage.src = `images/menu.svg`;
-        body.style.overflow = "visible";
-       
-        
-        
-        
+        body.style.overflow = "visible";    
     }
    
     
@@ -95,7 +91,7 @@ checkbox.addEventListener('change', function() {
         header.classList.add("headerafter");
         header.style.position = "fixed";
         emptyBox.style.display = "block";
-        logostyle.style.width = "5rem";
+        logostyle.style.width = "4rem";
         
         
         
