@@ -1,2 +1,3 @@
 # Landing-page
-My first portfolio landing page.
+My first landing page.
+Built only with HTML, CSS and JS
